@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "flatten": "node js-functions/answers/flatten.js"
+    "flatten": "node js-functions/answers/flatten.js",
+    "bind": "node js-functions/answers/bind.js"
   },
   "repository": {
     "type": "git",
