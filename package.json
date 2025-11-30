@@ -1,0 +1,20 @@
+{
+  "name": "frontend-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "flatten": "node js-functions/answers/flatten.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zowieerickson/frontend-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zowieerickson/frontend-practice/issues"
+  },
+  "homepage": "https://github.com/zowieerickson/frontend-practice#readme",
+  "description": ""
+}
