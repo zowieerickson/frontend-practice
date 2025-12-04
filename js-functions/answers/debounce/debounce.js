@@ -2,31 +2,17 @@ const search = document.querySelector("#search")
 const typingStatus = document.querySelector("#status")
 const ball = document.querySelector("#ball");
 
+// Random fluff, not a part of debounce solution
 let ballPosition;
+function animateBall() {
+    ballPosition = getComputedStyle(ball).transform.replace("matrix(", "").replace(")", "")
 
-
-// search.addEventListener("keyup", (event) => {
-
-//     ballPosition = getComputedStyle(ball).transform.replace("matrix(", "").replace(")", "")
-
-//     if (!ballPosition.includes("none")) {
-//         ballPosition = getComputedStyle(ball).transform.replace("matrix(", "").replace(")", "").split(',').at(-1)
-//         console.log(ballPosition)
-//     }
-
-//     clearTimeout(timeoutId)
-//     typingStatus.textContent = "Typing..."
-//     ball.classList.add("bouncing")
-
-//     timeoutId = setTimeout(thisWillRun, 500);
-// })
-
+    ball.classList.add("bouncing")
+}
 
 
 function thisWillRun(msg, event) {
-
     typingStatus.textContent = msg + ' ' + event.target.value;
-
     ball.classList.remove("bouncing")
 }
 
@@ -35,6 +21,7 @@ function debounce (callback, delay) {
     let timeoutId;
 
     return function(...args) {
+        animateBall()
         clearTimeout(timeoutId)
 
         timeoutId = setTimeout(() => {
